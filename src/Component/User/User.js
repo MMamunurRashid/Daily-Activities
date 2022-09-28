@@ -1,6 +1,14 @@
 import React from "react";
 
-const User = () => {
+const User = (props) => {
+  // console.log(props);
+  const { activityDetails } = props;
+  console.log(activityDetails);
+  let totalActivityTime = 0;
+  for (const activityTime of activityDetails) {
+    totalActivityTime = totalActivityTime + activityTime.timeRequired;
+  }
+
   return (
     <div>
       <div className="pt-3 ">
@@ -20,25 +28,25 @@ const User = () => {
           <h1 className="pl-3 text-lg font-semibold">Add a Break</h1>
           <div className="text-center mt-3 rounded bg-gray-300 py-5 mx-2">
             <a
-              className="text-white font-semibold p-3 rounded-full ml-1 bg-red-400 hover:bg-indigo-700"
+              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700"
               href="/"
             >
               10m
             </a>
             <a
-              className="text-white font-semibold p-3 rounded-full ml-1 bg-red-400 hover:bg-indigo-700"
+              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700"
               href="/"
             >
               15m
             </a>
             <a
-              className="text-white font-semibold p-3 rounded-full ml-1 bg-red-400 hover:bg-indigo-700"
+              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700"
               href="/"
             >
               20m
             </a>
             <a
-              className="text-white font-semibold p-3 rounded-full ml-1 bg-red-400 hover:bg-indigo-700 "
+              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700 "
               href="/"
             >
               30m
@@ -50,7 +58,9 @@ const User = () => {
             Activities Details
           </h1>
           <div className="rounded bg-gray-200 p-3 m-3">
-            <h1 className="font-semibold ml-">Activities Time: {} minute</h1>
+            <h1 className="font-semibold ml-">
+              Activities Time: {totalActivityTime} minute
+            </h1>
           </div>
           <div className="rounded bg-gray-200 p-3 m-3">
             <h1 className="font-semibold ml-">Break Time: {} minute</h1>

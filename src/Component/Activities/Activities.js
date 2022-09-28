@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Activity from "../Activity/Activity";
+import User from "../User/User";
 import "./Activities.css";
 
 const Activities = () => {
@@ -18,7 +19,7 @@ const Activities = () => {
         ))}
       </div>
       <div className="bg-white rounded-lg">
-        <h1>User info</h1>
+        <User></User>
       </div>
     </div>
   );

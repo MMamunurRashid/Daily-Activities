@@ -3,36 +3,42 @@
     "id": "1",
     "img": "https://image.shutterstock.com/image-vector/cute-boys-daily-morning-activities-600w-1634316916.jpg",
     "timeRequired": 60,
-    "name": "Morning Activities"
+    "name": "Morning Activities",
+    "description": "Everyday Morning walk, washroom, brush and breakfast"
   },
   {
     "id": "2",
     "img": "http://cse.iubat.edu/wp-content/uploads/2019/04/cse.jpg",
     "timeRequired": 300,
-    "name": "Campus Class"
+    "name": "Campus Class",
+    "description": "For University classes exams and others minimum 5 hours per day."
   },
   {
     "id": "3",
     "img": "https://cdn.dribbble.com/users/1488337/screenshots/10748794/programming_hero_course_4x.jpg",
     "timeRequired": 120,
-    "name": "P-Hero Web Course"
+    "name": "P-Hero Web Course",
+    "description": "For Programming Hero Web Development Course I have to do spent Minimum 5/6 hours daily."
   },
   {
     "id": "4",
     "img": "https://siteimages.textbooks.com/uploads/2014/11/Taking-a-Study-Break-Flickr-D-Sharon-Pruitt-Textbookscom-Blog-2.jpeg",
     "timeRequired": 120,
-    "name": "Regular Study"
+    "name": "Regular Study",
+    "description": "Minimum 2 hours for Regular Study"
   },
   {
     "id": "5",
     "img": "https://www.discoverphds.com/wp-content/uploads/elementor/thumbs/What-is-Research-Purpose-of-Research-phul4s3cbwe0xam190dnc4kz3z616ajmfkygodcdqg.png",
     "timeRequired": 60,
-    "name": "Thesis"
+    "name": "Thesis",
+    "description": "1 Hours for research about my thesis"
   },
   {
     "id": "6",
     "img": "https://cdn.dribbble.com/users/1488337/screenshots/10748794/programming_hero_course_4x.jpg",
-    "timeRequired": 120,
-    "name": "P-Hero Web Course"
+    "timeRequired": 180,
+    "name": "P-Hero Web Course",
+    "description": "For Programming Hero Web Development Course I have to do spent Minimum 5/6 hours daily."
   }
 ]

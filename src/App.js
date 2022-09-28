@@ -4,7 +4,7 @@ import Header from "./Component/Header/Header";
 
 function App() {
   return (
-    <div className="bg-gray-100 pl-20 pb-10">
+    <div className="bg-gray-100 pl-14 pb-10">
       <Header></Header>
       <Activities></Activities>
     </div>

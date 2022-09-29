@@ -19,15 +19,6 @@ const User = (props) => {
     setBreakTime(JSON.parse(localStorage.getItem("time")));
   }, []);
 
-  // const getTimeFromLocalStorage = () => {
-  //   let breakTimeFromLocalStorage = localStorage.getItem("time");
-  //   let time;
-  //   if (breakTimeFromLocalStorage) {
-  //     time = JSON.parse(breakTimeFromLocalStorage);
-  //   }
-  //   return time;
-  // };
-
   const handleComplete = () => {
     console.log("clicked");
     toast("Wow Great Job Mamun!! Your todays Activities Done!!");

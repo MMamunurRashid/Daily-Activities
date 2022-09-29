@@ -1,13 +1,23 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 const User = (props) => {
-  // console.log(props);
-  const { activityDetails, Break, handleBreakTime } = props;
+  const [breakTime, setBreakTime] = useState([]);
 
+  const { activityDetails, Break } = props;
   let totalActivityTime = 0;
   for (const activityTime of activityDetails) {
     totalActivityTime = totalActivityTime + activityTime.timeRequired;
   }
+
+  const handleBreakTime = (time) => {
+    localStorage.setItem(time, time);
+    setBreakTime(localStorage.getItem(time));
+  };
+
+  const handleComplete = () => {
+    console.log("clicked");
+    toast("Wow Great Job Mamun!! Your todays Activities Done!!");
+  };
 
   return (
     <div>
@@ -29,6 +39,7 @@ const User = (props) => {
           <div className="text-center mt-3 rounded bg-gray-300 py-5 mx-2">
             {Break.map((Break) => (
               <button
+                key={Break.id}
                 onClick={() => handleBreakTime(Break.time)}
                 className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700 "
               >
@@ -48,12 +59,15 @@ const User = (props) => {
           </div>
           <div className="rounded bg-gray-200 p-3 m-3">
             <h1 className="font-semibold ml-">
-              Break Time: {props.breakTime} minute
+              Break Time: {breakTime} minute
             </h1>
           </div>
         </div>
         <div className="">
-          <button className="mt-14 text-lg text-white ml-12 font-bold p-3 rounded-lg bg-indigo-700 hover:bg-gray-400">
+          <button
+            onClick={handleComplete}
+            className="mt-14 text-lg text-white ml-12 font-bold p-3 rounded-lg bg-indigo-700 hover:bg-gray-400"
+          >
             Activity Completed
           </button>
         </div>

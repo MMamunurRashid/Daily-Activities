@@ -11,7 +11,6 @@ const Activities = () => {
   //break  useState
   const [Break, setBreak] = useState([]);
   // break time useState
-  const [breakTime, setBreakTime] = useState([]);
 
   // activities fake data useEffect
   useEffect(() => {
@@ -25,11 +24,6 @@ const Activities = () => {
       .then((res) => res.json())
       .then((data) => setBreak(data));
   }, []);
-
-  const handleBreakTime = (time) => {
-    localStorage.setItem(time, time);
-    setBreakTime(localStorage.getItem(time));
-  };
 
   const handleAddToList = (activity) => {
     // console.log(activity.id);
@@ -49,12 +43,7 @@ const Activities = () => {
         ))}
       </div>
       <div className="bg-white rounded-lg">
-        <User
-          activityDetails={activityDetails}
-          Break={Break}
-          handleBreakTime={handleBreakTime}
-          breakTime={breakTime}
-        ></User>
+        <User activityDetails={activityDetails} Break={Break}></User>
       </div>
     </div>
   );

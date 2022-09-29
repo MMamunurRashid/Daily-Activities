@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import "./User.css";
 import { ToastContainer, toast } from "react-toastify";
 import Swal from "sweetalert2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 const User = (props) => {
   const [breakTime, setBreakTime] = useState([]);
 
@@ -33,7 +36,7 @@ const User = (props) => {
   };
 
   return (
-    <div>
+    <div className="user">
       <div className="pt-3 ">
         <div className="flex items-center pl-3">
           <img
@@ -41,12 +44,20 @@ const User = (props) => {
             src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/278864197_3268548550136106_2131327974181389030_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=vuCWIQOu3ZUAX-X3iHq&_nc_ht=scontent.fdac5-1.fna&oh=00_AT9Pk22vSzWP39N7XSbqnYqRePuQKZd4Rw2v8DMnrsGPVg&oe=63390442"
             alt=""
           />
-          <h1 className="text-xl pl-1 font-bold">Md Mamunur Rashid</h1>
+          <div className=" pl-1">
+            <h1 className="text-xl font-bold">Md Mamunur Rashid</h1>
+            <h5>
+              <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Dhaka,
+              Bangladesh
+            </h5>
+          </div>
         </div>
         <h1 className="pt-1 text-lg font-semibold items-center text-center">
           Web Developer
         </h1>
-        <h1 className=" text-lg font-semibold text-center">Student</h1>
+        <h1 className=" text-lg font-semibold text-center">
+          Student-CSE, IUBAT
+        </h1>
         <div className="mt-10">
           <h1 className="pl-3 text-lg font-semibold">Add a Break</h1>
           <div className="text-center mt-3 rounded bg-gray-300 py-5 mx-2">

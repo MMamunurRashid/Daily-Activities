@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="bg-gray-100 pl-14 pb-10">
+    <div className="bg-gray-100 app pb-10">
       <ToastContainer></ToastContainer>
       <Header></Header>
       <Activities></Activities>

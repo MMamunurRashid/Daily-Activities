@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.app {
+  padding-left: 70px;
+}
+@media screen and (max-width: 920px) {
+  .app {
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 668px) {
+  .app {
+    padding-left: 15px;
+  }
+}

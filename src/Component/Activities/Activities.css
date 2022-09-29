@@ -1,9 +1,33 @@
 .Activities {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 5fr 2fr;
 }
 .Activitys {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+@media screen and (max-width: 920px) {
+  .Activities {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  .Activitys {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 668px) {
+  .Activities {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .Activitys {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }

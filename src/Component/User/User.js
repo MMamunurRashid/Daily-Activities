@@ -60,7 +60,7 @@ const User = (props) => {
         </h1>
         <div className="mt-10">
           <h1 className="pl-3 text-lg font-semibold">Add a Break</h1>
-          <div className="text-center mt-3 rounded bg-gray-300 py-5 mx-2">
+          <div className="text-center mt-3 rounded bg-gray-300 py-5 mx-1">
             {Break.map((Break) => (
               <button
                 key={Break.id}

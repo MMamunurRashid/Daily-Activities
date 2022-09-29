@@ -1,0 +1,23 @@
+.Blog {
+  display: flex;
+}
+@media screen and (max-width: 668px) {
+  .Blog {
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
+  }
+  .each-blog {
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .Blog {
+    text-align: center;
+    display: block;
+    padding-left: 30px;
+  }
+  .each-blog {
+    padding-top: 30px;
+  }
+}

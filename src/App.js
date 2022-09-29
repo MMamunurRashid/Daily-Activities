@@ -3,6 +3,7 @@ import Activities from "./Component/Activities/Activities";
 import Header from "./Component/Header/Header";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Blog from "./Component/Blog/Blog";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <ToastContainer></ToastContainer>
       <Header></Header>
       <Activities></Activities>
+      <Blog></Blog>
     </div>
   );
 }

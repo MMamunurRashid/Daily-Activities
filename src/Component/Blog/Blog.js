@@ -26,8 +26,8 @@ const Blog = () => {
 
   return (
     <div className="pt-20">
-      <h1 className="text-center font-bold text-3xl pb-8">Blog</h1>
-      <div className="Blog justify-evenly shadow-2xl m-5 py-5 rounded-xl">
+      <h1 className="text-center font-bold text-3xl">Blog</h1>
+      <div className="Blog justify-evenly shadow-2xl m-5 py-10 rounded-xl">
         <div className="each-blog">
           <h1 className="text-xl font-bold">How Does React Work?</h1>
           <button

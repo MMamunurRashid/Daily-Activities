@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import Swal from "sweetalert2";
 const User = (props) => {
   const [breakTime, setBreakTime] = useState([]);
 
@@ -17,6 +18,14 @@ const User = (props) => {
   const handleComplete = () => {
     console.log("clicked");
     toast("Wow Great Job Mamun!! Your todays Activities Done!!");
+
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Wow Great Job Mamun!! Your todays Activities Done!!",
+      showConfirmButton: false,
+      timer: 3000,
+    });
   };
 
   return (

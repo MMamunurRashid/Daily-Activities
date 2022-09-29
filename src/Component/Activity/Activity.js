@@ -15,7 +15,7 @@ const Activity = (props) => {
         </h5>
         <button
           onClick={() => handleAddToList(activity)}
-          className="mt-5 border-0 bg-indigo-600 hover:bg-indigo-300 active:bg-red-500 text-white font-semibold rounded-xl px-12 py-1 "
+          className=" mt-12 border-0 bg-indigo-600 hover:bg-indigo-300 active:bg-red-500 text-white font-semibold rounded-xl px-12 py-1 "
         >
           Add to List
         </button>

@@ -2,7 +2,7 @@ import React from "react";
 import "./Activity.css";
 const Activity = (props) => {
   const { handleAddToList, activity } = props;
-  const { name, timeRequired, img, description, id } = activity;
+  const { name, timeRequired, img, description } = activity;
 
   return (
     <div className="Activity text-center rounded-xl  shadow-2xl pb-3">

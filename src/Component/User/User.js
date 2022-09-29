@@ -2,8 +2,8 @@ import React from "react";
 
 const User = (props) => {
   // console.log(props);
-  const { activityDetails } = props;
-  console.log(activityDetails);
+  const { activityDetails, Break, handleBreakTime } = props;
+
   let totalActivityTime = 0;
   for (const activityTime of activityDetails) {
     totalActivityTime = totalActivityTime + activityTime.timeRequired;
@@ -27,30 +27,14 @@ const User = (props) => {
         <div className="mt-10">
           <h1 className="pl-3 text-lg font-semibold">Add a Break</h1>
           <div className="text-center mt-3 rounded bg-gray-300 py-5 mx-2">
-            <a
-              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700"
-              href="/"
-            >
-              10m
-            </a>
-            <a
-              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700"
-              href="/"
-            >
-              15m
-            </a>
-            <a
-              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700"
-              href="/"
-            >
-              20m
-            </a>
-            <a
-              className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700 "
-              href="/"
-            >
-              30m
-            </a>
+            {Break.map((Break) => (
+              <button
+                onClick={() => handleBreakTime(Break.time)}
+                className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700 "
+              >
+                {Break.time}m
+              </button>
+            ))}
           </div>
         </div>
         <div>
@@ -63,7 +47,9 @@ const User = (props) => {
             </h1>
           </div>
           <div className="rounded bg-gray-200 p-3 m-3">
-            <h1 className="font-semibold ml-">Break Time: {} minute</h1>
+            <h1 className="font-semibold ml-">
+              Break Time: {props.breakTime} minute
+            </h1>
           </div>
         </div>
         <div className="">

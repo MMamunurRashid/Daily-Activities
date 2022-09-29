@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Swal from "sweetalert2";
 const User = (props) => {
@@ -10,10 +10,23 @@ const User = (props) => {
     totalActivityTime = totalActivityTime + activityTime.timeRequired;
   }
 
-  const handleBreakTime = (time) => {
-    localStorage.setItem(time, time);
-    setBreakTime(localStorage.getItem(time));
+  const handleBreakTime = (Break) => {
+    // console.log(Break.id);
+    localStorage.setItem("time", Break.time);
+    setBreakTime(JSON.parse(localStorage.getItem("time")));
   };
+  useEffect(() => {
+    setBreakTime(JSON.parse(localStorage.getItem("time")));
+  }, []);
+
+  // const getTimeFromLocalStorage = () => {
+  //   let breakTimeFromLocalStorage = localStorage.getItem("time");
+  //   let time;
+  //   if (breakTimeFromLocalStorage) {
+  //     time = JSON.parse(breakTimeFromLocalStorage);
+  //   }
+  //   return time;
+  // };
 
   const handleComplete = () => {
     console.log("clicked");
@@ -49,7 +62,7 @@ const User = (props) => {
             {Break.map((Break) => (
               <button
                 key={Break.id}
-                onClick={() => handleBreakTime(Break.time)}
+                onClick={() => handleBreakTime(Break)}
                 className="text-white font-semibold p-3 rounded-lg ml-1 bg-red-400 hover:bg-indigo-700 "
               >
                 {Break.time}m
